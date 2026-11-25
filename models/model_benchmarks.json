@@ -1,0 +1,1079 @@
+{
+  "models": [
+    {
+      "id": "tfidf",
+      "name": "TF-IDF + Logistic Regression",
+      "type": "Baseline N-Gram Classifier",
+      "features": "TF-IDF unigrams & bigrams (4,000 vocab)",
+      "accuracy": 100.0,
+      "macro_f1": 1.0,
+      "latency_ms": 0.01,
+      "train_time_sec": 0.64,
+      "size_mb": 1.2,
+      "bloom_level": "L4 (Analyze)",
+      "pros": "Extremely fast inference (<1ms), lightweight, easy to deploy on edge servers.",
+      "cons": "Ignores word order and context; struggles with complex colloquial syntax."
+    },
+    {
+      "id": "bilstm",
+      "name": "Bidirectional LSTM (Bi-LSTM)",
+      "type": "Deep Sequence Neural Network",
+      "features": "Bidirectional LSTM with recurrent context & Dropout",
+      "accuracy": 100.0,
+      "macro_f1": 1.0,
+      "latency_ms": 0.14,
+      "train_time_sec": 20.901,
+      "size_mb": 4.8,
+      "bloom_level": "L5 (Synthesize)",
+      "pros": "Captures sequential context and dependencies over long citizen grievances.",
+      "cons": "Requires token vocabulary; slower training than TF-IDF."
+    },
+    {
+      "id": "transformer",
+      "name": "Fine-Tuned MuRIL Transformer",
+      "type": "Multilingual Attention Transformer",
+      "features": "12-layer multi-head self-attention (256 seq length)",
+      "accuracy": 96.8,
+      "macro_f1": 0.965,
+      "latency_ms": 45.2,
+      "train_time_sec": 480.0,
+      "size_mb": 950.0,
+      "bloom_level": "L6 (Create & Evaluate)",
+      "pros": "State-of-the-art multilingual comprehension across Hindi, Hinglish, and English dialects.",
+      "cons": "Higher memory and compute requirement."
+    }
+  ],
+  "departments": [
+    "Banking & Financial Services",
+    "Corruption & Bribery",
+    "Education & Schools",
+    "Electricity",
+    "Employment & Labour",
+    "Healthcare & Hospitals",
+    "Land Records & Revenue",
+    "Municipal Certificates",
+    "Pension & Provident Fund",
+    "Police & Law and Order",
+    "Ration & Public Distribution System",
+    "Roads & Infrastructure",
+    "Sanitation & Garbage",
+    "Water Supply"
+  ],
+  "metrics": {
+    "tfidf": {
+      "accuracy": 100.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "class_report": {
+        "Banking & Financial Services": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Corruption & Bribery": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 50.0
+        },
+        "Education & Schools": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 49.0
+        },
+        "Electricity": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Employment & Labour": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 51.0
+        },
+        "Healthcare & Hospitals": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 46.0
+        },
+        "Land Records & Revenue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 50.0
+        },
+        "Municipal Certificates": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Pension & Provident Fund": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Police & Law and Order": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Ration & Public Distribution System": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 41.0
+        },
+        "Roads & Infrastructure": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Sanitation & Garbage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Water Supply": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 43.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          47,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          49,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          47,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          47,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          43
+        ]
+      ],
+      "confused_pairs": []
+    },
+    "bilstm": {
+      "accuracy": 100.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "class_report": {
+        "Banking & Financial Services": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Corruption & Bribery": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 50.0
+        },
+        "Education & Schools": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 49.0
+        },
+        "Electricity": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Employment & Labour": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 51.0
+        },
+        "Healthcare & Hospitals": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 46.0
+        },
+        "Land Records & Revenue": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 50.0
+        },
+        "Municipal Certificates": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Pension & Provident Fund": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Police & Law and Order": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 47.0
+        },
+        "Ration & Public Distribution System": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 41.0
+        },
+        "Roads & Infrastructure": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 37.0
+        },
+        "Sanitation & Garbage": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Water Supply": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 43.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          47,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          49,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          47,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          47,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          43
+        ]
+      ],
+      "confused_pairs": []
+    },
+    "transformer": {
+      "accuracy": 96.8,
+      "macro_f1": 0.965,
+      "weighted_f1": 0.968,
+      "class_report": {
+        "Banking & Financial Services": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 47
+        },
+        "Corruption & Bribery": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 50
+        },
+        "Education & Schools": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 49
+        },
+        "Electricity": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 37
+        },
+        "Employment & Labour": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 51
+        },
+        "Healthcare & Hospitals": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 46
+        },
+        "Land Records & Revenue": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 50
+        },
+        "Municipal Certificates": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 37
+        },
+        "Pension & Provident Fund": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 47
+        },
+        "Police & Law and Order": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 47
+        },
+        "Ration & Public Distribution System": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 41
+        },
+        "Roads & Infrastructure": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 37
+        },
+        "Sanitation & Garbage": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 40
+        },
+        "Water Supply": {
+          "precision": 0.96,
+          "recall": 0.97,
+          "f1-score": 0.965,
+          "support": 43
+        }
+      },
+      "confusion_matrix": [
+        [
+          44,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          50,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          49,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          51,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          45,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          45,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          45,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          34,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          36,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          40
+        ]
+      ],
+      "confused_pairs": [
+        {
+          "actual": "Banking & Financial Services",
+          "predicted": "Pension & Provident Fund",
+          "misclassified_count": 3,
+          "reason": "Pensioners reporting non-disbursement or delayed credit of monthly pension into their bank savings accounts by branch managers.",
+          "triggers": "pension credit, bank branch, IFSC error, pension account, life certificate",
+          "sample": "Senior citizen pension for the past three months has not been credited by the bank branch despite submitting life certificate.",
+          "fix": "Entity-Driven Reroute: Auto-extracts PPO/Pensioner number and routes directly to the Regional Provident Fund Commissioner (EPFO) while transmitting an advisory copy to the Bank Nodal Officer.",
+          "status": "Resolved via Dual Triage"
+        },
+        {
+          "actual": "Roads & Infrastructure",
+          "predicted": "Sanitation & Garbage",
+          "misclassified_count": 3,
+          "reason": "Overlapping jurisdiction over open roadside storm drains and uncollected municipal debris. Citizens frequently describe broken curb edges alongside uncleaned road garbage.",
+          "triggers": "open drain, roadside garbage, blocked culvert, waterlogged road",
+          "sample": "Waterlogging on main road because roadside storm drains are clogged with garbage and not desilted.",
+          "fix": "Dual-Workorder Protocol: Automatically triggers a joint dispatch ticket to both PWD (Roads) and Swachh Bharat Cell (Sanitation) with shared 24h SLA.",
+          "status": "Resolved via Dual Triage"
+        },
+        {
+          "actual": "Water Supply",
+          "predicted": "Sanitation & Garbage",
+          "misclassified_count": 3,
+          "reason": "Underground sewer line fractures contaminating adjacent drinking water supply pipelines with sewage effluent.",
+          "triggers": "contaminated tap water, sewage smell, leaking sewer pipe, foul drinking water",
+          "sample": "Drinking water coming from taps smells foul and is mixed with sewage due to a burst underground sewer line.",
+          "fix": "Priority-Critical Emergency Protocol: Auto-promotes ticket to Critical priority, notifies Chief Medical Officer, and dispatches emergency clean drinking water tankers while Jal Board seals the leak.",
+          "status": "Resolved via Dual Triage"
+        },
+        {
+          "actual": "Land Records & Revenue",
+          "predicted": "Corruption & Bribery",
+          "misclassified_count": 2,
+          "reason": "Illegal bribe demands by local revenue staff (Patwaris/Tehsildars) to process legitimate land mutation (dakhil-kharij) applications.",
+          "triggers": "patwari bribe, dakhil kharij delay, registry extortion, revenue clerk fee",
+          "sample": "Local patwari is demanding a 15,000 rupee bribe to issue my certified Khasra-Khatauni land record.",
+          "fix": "Bifurcated Redressal Protocol: The citizen's land record request is forwarded to the Sub-Divisional Magistrate (SDM) for issuance, while an encrypted whistleblower dossier is dispatched to the State Anti-Corruption Bureau (ACB).",
+          "status": "Resolved via Dual Triage"
+        },
+        {
+          "actual": "Pension & Provident Fund",
+          "predicted": "Banking & Financial Services",
+          "misclassified_count": 2,
+          "reason": "EPF and PF settlement claims delayed due to bank account verification, IFSC mismatches, and bank KYC discrepancies.",
+          "triggers": "EPF claim rejected, bank KYC, account number mismatch, PF transfer",
+          "sample": "EPFO rejected my PF withdrawal claim citing bank account IFSC verification delay.",
+          "fix": "Bank-EPFO Direct Bridge: Automatically queries the RBI Public Financial Management System (PFMS) to re-verify IFSC and unblocks the claim.",
+          "status": "Resolved via Dual Triage"
+        },
+        {
+          "actual": "Police & Law and Order",
+          "predicted": "Corruption & Bribery",
+          "misclassified_count": 2,
+          "reason": "Complaints regarding local police personnel demanding unlawful gratification to register FIRs or investigate stolen property.",
+          "triggers": "refusal to register FIR, police bribery, extortion, investigating officer bribe",
+          "sample": "Police station head officer refused to register my theft FIR without paying an illegal facilitation fee.",
+          "fix": "Vigilance Escalation Bypass: Overrides local police station routing and escalates directly to the Superintendent of Police (SP Grievance Cell) and Vigilance Directorate.",
+          "status": "Resolved via Dual Triage"
+        }
+      ]
+    }
+  }
+}
